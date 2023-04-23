@@ -66,4 +66,12 @@ io.on('connection', socket => {
       .to(roomId)
       .emit(constants.socketEvents.USER_UPDATE, rooms[roomId][socket.id]);
   });
+
+  socket.on(constants.socketEvents.NODE_CHANGE, changes => {
+    socket.to(roomId).emit(constants.socketEvents.NODE_CHANGE, changes);
+  });
+
+  socket.on(constants.socketEvents.EDGE_CHANGE, changes => {
+    socket.to(roomId).emit(constants.socketEvents.EDGE_CHANGE, changes);
+  });
 });

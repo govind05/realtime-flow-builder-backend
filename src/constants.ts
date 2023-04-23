@@ -5,5 +5,7 @@ export const constants = {
     USER_LEFT: 'user-left',
     USER_UPDATE: 'user-update',
     MOUSE_POS_UPDATE: 'mouse-pos-update',
+    NODE_CHANGE: 'node-change',
+    EDGE_CHANGE: 'edge-change',
   },
 };
